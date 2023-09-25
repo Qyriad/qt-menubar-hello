@@ -6,7 +6,8 @@ project(
     'cpp_std=c++20',
     'warning_level=2',
     'buildtype=debugoptimized',
-  ]
+  ],
+  version: '0.0.1',
 )
 
 qt5 = import('qt5')
@@ -22,7 +23,6 @@ sources = [
   'src/main.cpp',
 ]
 
+moc_files = qt5.compile_moc(headers: headers, dependencies: qt5_dep)
 
-moc_files = qt5.compile_moc(headers: headers, include_directories: inc, dependencies: qt5_dep)
-
-executable('menubar', sources, moc_files, include_directories: inc, dependencies: qt5_dep)
+executable('menubar', sources, moc_files, dependencies: qt5_dep)

@@ -40,6 +40,9 @@ ChildWindow::ChildWindow(QWidget *parent) : QMainWindow(parent)
 
 	// The parent of this menu bar can be `this` on KDE, but not on macOS.
 	this->menu_bar = new QMenuBar(nullptr);
+
+	// There is a condition under which this->setMenuBar() causes the menu bar to completely break.
+	// I have not figured out what it is yet.
 	this->setMenuBar(this->menu_bar);
 	this->menu_file = this->menuBar()->addMenu(tr("&File"));
 	this->menu_file->addAction(this->action_hello);

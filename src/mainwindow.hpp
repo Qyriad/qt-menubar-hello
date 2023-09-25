@@ -2,6 +2,7 @@
 
 #include <QMainWindow>
 #include <QMenu>
+#include <QAction>
 
 class MainWindow : public QMainWindow
 {

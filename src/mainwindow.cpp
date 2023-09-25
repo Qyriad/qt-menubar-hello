@@ -1,4 +1,3 @@
-
 #include <QMessageBox>
 #include <QMenuBar>
 
@@ -14,10 +13,6 @@ MainWindow::MainWindow()
 
 	this->menu_file = this->menuBar()->addMenu(tr("&File"));
 	this->menu_file->addAction(this->action_hello);
-
-	this->setWindowTitle(tr("Menus"));
-	this->setMinimumSize(160, 160);
-	this->resize(480, 320);
 }
 
 void MainWindow::hello()

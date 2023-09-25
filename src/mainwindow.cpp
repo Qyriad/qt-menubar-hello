@@ -8,8 +8,9 @@ MainWindow::MainWindow()
 	this->action_hello = new QAction(tr("&Hello"), this);
 	this->connect(this->action_hello, &QAction::triggered, this, &MainWindow::hello);
 
-	// This line is not required on at least KDE.
-	this->setMenuBar(new QMenuBar(nullptr));
+	// This is alluded to in the Qt documentation, but does not appear to be
+	// necessary on either KDE or macOS.
+	//this->setMenuBar(new QMenuBar(nullptr));
 
 	this->menu_file = this->menuBar()->addMenu(tr("&File"));
 	this->menu_file->addAction(this->action_hello);

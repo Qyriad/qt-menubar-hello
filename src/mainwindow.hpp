@@ -17,6 +17,7 @@ class MainWindow : public QMainWindow
 		void create_actions();
 		void create_menus();
 
+		// These are not required to be class fields.
 		QMenu *menu_file;
 		QAction *action_hello;
 };

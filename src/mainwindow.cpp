@@ -38,9 +38,6 @@ ChildWindow::ChildWindow(QWidget *parent) : QMainWindow(parent)
 
 	this->action_hello = new QAction(tr("&Hello"), this);
 
-	// We cannot use this->menuBar() here, and in fact if we setMenuBar(this->menu_bar), it will actually
-	// break that menu bar.
-
 	// The parent of this menu bar can be `this` on KDE, but not on macOS.
 	this->menu_bar = new QMenuBar(nullptr);
 	this->setMenuBar(this->menu_bar);
